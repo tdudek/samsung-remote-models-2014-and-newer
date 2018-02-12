@@ -1,0 +1,14 @@
+{
+  "name": "example",
+  "version": "1.0.0",
+  "description": "",
+  "main": "example.js",
+  "dependencies": {
+    "hapi": "^17.2.0",
+    "inert": "^5.1.0",
+    "samsung-remote": "file:../"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}
