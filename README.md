@@ -10,7 +10,7 @@ Until now I could test the connection with my own TV. If you have any new insigh
 ## Demo
 
 To try out the API quickly, there is a demo which can be found in the `./example/` directory.
-To start the demo, please use the following commands:
+To start the [demo](example/server.js), please use the following commands:
 
 ```bash
 $ yarn install
@@ -79,62 +79,6 @@ tv.sendKey('KEY_MUTE')
 
 Here you can find examples how to use the library:
 
-### Example to request PIN
-
-```javascript
-const SamsungTv = require('./lib/SamsungTv')
-
-// turn on debug logs
-const DEBUG = true
-console.debug = (...args) => {
-  if (DEBUG) {
-    console.log.apply(this, args)
-  }
-}
-
-// create configuration
-const deviceConfig = {
-  ip: '192.168.178.50',
-  appId: '721b6fce-4ee6-48ba-8045-955a539edadb',
-  userId: '654321',
-}
-
-const tv = new SamsungTv(deviceConfig)
-
-// Request PIN
-tv.init()
-  .then(() => tv.requestPin())
-```
-
-### Example to connect
-
-```javascript
-const SamsungTv = require('./lib/SamsungTv')
-
-// turn on debug logs
-const DEBUG = true
-console.debug = (...args) => {
-  if (DEBUG) {
-    console.log.apply(this, args)
-  }
-}
-
-const deviceConfig = {
-  ip: '192.168.178.50',
-  appId: '721b6fce-4ee6-48ba-8045-955a539edadb',
-  userId: '654321',
-}
-
-const tv = new SamsungTv(deviceConfig)
-
-// (optional) register listener on established connection
-tv.onConnected(() => {
-  tv.sendKey('KEY_VOLUP')
-})
-
-// confirm PIN and send 'mute' key
-tv.init()
-  .then(() => tv.confirmPin('9603'))
-  .then(() => tv.connect())
-  .then(() => tv.sendKey('KEY_MUTE'))
-```
+[How to request PIN](example/requestPin.js)
+[How to connect with the TV and send a key](example/connect.js)
+[Demo UI](example/server.js)
