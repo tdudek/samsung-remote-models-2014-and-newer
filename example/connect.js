@@ -1,7 +1,7 @@
-const SamsungTv = require('./lib/SamsungTv')
+const SamsungTv = require('samsung-remote')
 
+// turn on debug logs
 const DEBUG = true
-
 console.debug = (...args) => {
   if (DEBUG) {
     console.log.apply(this, args)
@@ -16,21 +16,13 @@ const deviceConfig = {
 
 const tv = new SamsungTv(deviceConfig)
 
-// register listener on established connection
+// (optional) register listener on established connection
 tv.onConnected(() => {
   tv.sendKey('KEY_VOLUP')
 })
 
-// Request PIN
-//*/
-tv.init()
-  .then(() => tv.requestPin())
-//*/
-
-// Confirm PIN and turn off TV
-//*/
+// confirm PIN and send 'mute' key
 tv.init()
   .then(() => tv.confirmPin('9603'))
   .then(() => tv.connect())
   .then(() => tv.sendKey('KEY_MUTE'))
-//*/
