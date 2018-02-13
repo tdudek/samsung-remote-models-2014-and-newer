@@ -8,6 +8,7 @@ Credits go to https://github.com/Ape/samsungctl/issues/22.
 Until now I could test the connection with my own TV. If you have any new insights with other models, please share your results, so I can update the following list. 
 
 * UE55JU7590
+* UE55JS8500 (confirmed by [twistedpixel](https://github.com/tdudek/samsung-remote-models-2014-and-newer/issues/1))
 
 ## Demo
 
