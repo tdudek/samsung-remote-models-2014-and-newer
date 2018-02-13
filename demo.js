@@ -1,4 +1,3 @@
-const fetch = require('node-fetch')
 const SamsungTv = require('./lib/SamsungTv')
 
 const DEBUG = true
@@ -11,7 +10,6 @@ console.debug = (...args) => {
 
 const deviceConfig = {
   ip: '192.168.178.50',
-  pinPort: 8080,
   appId: '721b6fce-4ee6-48ba-8045-955a539edadb',
   userId: '654321',
 }
@@ -30,7 +28,7 @@ tv.init()
 //*/
 
 // Confirm PIN and turn off TV
-/*/
+//*/
 tv.init()
   .then(() => tv.confirmPin('9603'))
   .then(() => tv.connect())
