@@ -13,7 +13,6 @@ console.debug = (...args) => {
 
 const deviceConfig = {
   ip: null,
-  pinPort: 8080,
   appId: '721b6fce-4ee6-48ba-8045-955a539edadb',
   userId: '654321',
 }
@@ -44,8 +43,8 @@ server.route({
   method: 'POST',
   path: '/api/connect',
   handler: (request, h) => {
-    samsungTv.requestPin()
-    return {}
+    return samsungTv.requestPin()
+      .then(() => { })
   }
 })
 
@@ -56,9 +55,8 @@ server.route({
     const pin = request.payload.pin
     return samsungTv.confirmPin(pin)
       .then(_identity => {
-        return samsungTv.connect().then(() => {
-          return _identity
-        })
+        return samsungTv.connect()
+          .then(() => _identity)
       })
   }
 })

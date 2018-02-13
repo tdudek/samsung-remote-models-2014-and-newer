@@ -95,9 +95,6 @@ class ConfirmDeviceView {
       headers: {
         'Content-Type': 'application/json'
       },
-      body: JSON.stringify({
-        ip: this.store.ip
-      })
     })
       .then(response => response.json())
       .then(response => {
