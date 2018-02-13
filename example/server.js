@@ -44,7 +44,9 @@ server.route({
   path: '/api/connect',
   handler: (request, h) => {
     return samsungTv.requestPin()
-      .then(() => { })
+      .then(() => {
+        return {}
+      })
   }
 })
 

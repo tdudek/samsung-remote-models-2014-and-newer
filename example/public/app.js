@@ -28,8 +28,6 @@ const notify = (notification) => {
   })
 }
 
-const store = {}
-
 class ConfigView {
 
   constructor(store) {
@@ -192,5 +190,5 @@ class SendKeyView {
   }
 }
 
-
-new ConfigView().show()
+const store = {}
+new ConfigView(store).show()
