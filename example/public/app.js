@@ -42,7 +42,7 @@ class ConfigView {
   confirm(event) {
     event.stopImmediatePropagation()
 
-    store.ip = this.ipInput.value
+    this.store.ip = this.ipInput.value
 
     show('config-progress-bar')
 
@@ -52,14 +52,14 @@ class ConfigView {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        ip: store.ip
+        ip: this.store.ip
       })
     })
       .then((response) => response.json())
       .then(device => {
-        store.device = device
+        this.store.device = device
 
-        new ConfirmDeviceView(device).show()
+        new ConfirmDeviceView(this.store).show()
       })
       .catch(err => {
         notify('Failed to ping: ' + err)
@@ -75,9 +75,11 @@ class ConfigView {
 }
 
 class ConfirmDeviceView {
-  constructor(device) {
+  constructor(store) {
+    this.store = store
+
     const deviceName = document.getElementById('device-name')
-    deviceName.textContent = device.name
+    deviceName.textContent = store.device.name
 
     this.confirmButton = document.getElementById('confirm-device-button')
     this.confirmButton.addEventListener('click', this.confirm.bind(this))
@@ -94,12 +96,12 @@ class ConfirmDeviceView {
         'Content-Type': 'application/json'
       },
       body: JSON.stringify({
-        ip: store.ip
+        ip: this.store.ip
       })
     })
       .then(response => response.json())
       .then(response => {
-        new PinView().show()
+        new PinView(this.store).show()
       })
       .catch(err => {
         notify('Failed to connect: ' + err)
@@ -114,7 +116,8 @@ class ConfirmDeviceView {
 }
 
 class PinView {
-  constructor() {
+  constructor(store) {
+    this.store = store
     this.pinInput = document.getElementById('pin-input')
     this.confirmButton = document.getElementById('pin-button')
     this.confirmButton.addEventListener('click', this.confirm.bind(this))
@@ -139,7 +142,7 @@ class PinView {
     })
       .then((response) => response.json())
       .then(() => {
-        new SendKeyView(store).show()
+        new SendKeyView(this.store).show()
       })
       .catch(err => {
         notify('Failed to pair: ' + err)
