@@ -2,6 +2,8 @@
 
 This project is a proof of concept to remote control Samsung TV models 2014+ which require encrypted communication with the internal web service of the TV.
 
+Credits go to https://github.com/Ape/samsungctl/issues/22. 
+
 ## Models working
 Until now I could test the connection with my own TV. If you have any new insights with other models, please share your results, so I can update the following list. 
 
