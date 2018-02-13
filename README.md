@@ -79,6 +79,6 @@ tv.sendKey('KEY_MUTE')
 
 Here you can find examples how to use the library:
 
-[How to request PIN](example/requestPin.js)
-[How to connect with the TV and send a key](example/connect.js)
-[Demo UI](example/server.js)
+* [How to request PIN](example/requestPin.js)
+* [How to connect with the TV and send a key](example/connect.js)
+* [Demo UI](example/server.js)
