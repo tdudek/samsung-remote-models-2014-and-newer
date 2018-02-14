@@ -9,6 +9,8 @@ Until now I could test the connection with my own TV. If you have any new insigh
 
 * UE55JU7590
 * UE55JS8500 (confirmed by [twistedpixel](https://github.com/tdudek/samsung-remote-models-2014-and-newer/issues/1))
+* UE50HU6900 (confirmed by [Holland1](https://github.com/tdudek/samsung-remote-models-2014-and-newer/issues/2))
+* UE55HU7500 (confirmed by [riemers](https://github.com/tdudek/samsung-remote-models-2014-and-newer/issues/3))
 
 ## Demo
 
