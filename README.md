@@ -7,10 +7,19 @@ Credits go to https://github.com/Ape/samsungctl/issues/22.
 ## Models working
 Until now I could test the connection with my own TV. If you have any new insights with other models, please share your results, so I can update the following list. 
 
+* UE48H6270  (confirmed by [paolog89](../../issues/1))
+* UE48H6400 (confirmed by [kkapitan](../../issues/4))
+* UE48J6300  (confirmed by [luca-angemi](../../issues/7))
+* UE48JS9000 (confirmed by [Iniaki](../../issues/12))
+* UE50HU6900 (confirmed by [Holland1](../../issues/2))
+* UE50JU6800 (confirmed by [Jeroen-R](../../issues/9))
+* UE55H6400 (confirmed by [axel3rd](../../issues/14))
+* UE55HU7500 (confirmed by [riemers](../../issues/3))
+* UE55JS8500 (confirmed by [twistedpixel](../../issues/1))
+* UE55JU7505 (confirmed by [holmie](../../issues/13))
 * UE55JU7590
-* UE55JS8500 (confirmed by [twistedpixel](https://github.com/tdudek/samsung-remote-models-2014-and-newer/issues/1))
-* UE50HU6900 (confirmed by [Holland1](https://github.com/tdudek/samsung-remote-models-2014-and-newer/issues/2))
-* UE55HU7500 (confirmed by [riemers](https://github.com/tdudek/samsung-remote-models-2014-and-newer/issues/3))
+* UN40JU6000 (confirmed by [vsnine](../../issues/6))
+* UN60JS7000 (confirmed by [nspinelli](../../issues/5))
 
 ## Demo
 
