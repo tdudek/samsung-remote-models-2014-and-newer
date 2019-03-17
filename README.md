@@ -16,6 +16,7 @@ Until now I could test the connection with my own TV. If you have any new insigh
 * UE55H6400 (confirmed by [axel3rd](../../issues/14))
 * UE55HU7500 (confirmed by [riemers](../../issues/3))
 * UE55JS8500 (confirmed by [twistedpixel](../../issues/1))
+* UE55JU6800 (confirmed by [fquinto](../../issues/25))
 * UE55JU7505 (confirmed by [holmie](../../issues/13))
 * UE55JU7590
 * UN40JU6000 (confirmed by [vsnine](../../issues/6))
